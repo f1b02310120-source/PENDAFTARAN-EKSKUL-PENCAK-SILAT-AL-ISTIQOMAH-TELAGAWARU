@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendaftaran Ekskul Pencak Silat AL-ISTIQOMAH TELAGAWARU</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
+}
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:2.5rem;
+    color:#facc15;
+}
+
+.container{
+    max-width:700px;
+    margin:20px auto;
+    background:white;
+    color:#333;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, select, textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#b91c1c;
+}
+
+.success{
+    display:none;
+    margin-top:15px;
+    background:#16a34a;
+    color:white;
+    padding:10px;
+    border-radius:8px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1> 🥋 Pendaftaran Ekskul Pencak Silat AL-ISTIQOMAH TELAGAWARU</h1>
+    <p> MA / MTS / MI Anda</p>
+</header>
+
+<div class="container">
+
+<form id="Form Pendaftaran">
+
+    <label>Nama Lengkap</label>
+    <input type="text" id="nama" required>
+
+    <label>Kelas</label>
+    <input type="text" id="kelas" required>
+
+    <label>Jenis Kelamin</label>
+    <select id="jk" required>
+        <option value="">Pilih</option>
+        <option>Laki-laki</option>
+        <option>Perempuan</option>
+    </select>
+
+    <label>Nomor WhatsApp</label>
+    <input type="tel" id="wa" required>
+
+    <label>Alamat</label>
+    <textarea id="alamat" rows="3"></textarea>
+
+    <label>Alasan Mengikuti Pencak Silat</label>
+    <textarea id="alasan" rows="4"></textarea>
+
+    <button type="submit">Daftar Sekarang</button>
+
+</form>
+
+<div class="success" id="pesan">
+    ✅ Pendaftaran berhasil dikirim!
+</div>
+
+</div>
+
+<script>
+document.getElementById("formPendaftaran").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    document.getElementById("pesan").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+</body>
+</html>
